@@ -1,11 +1,14 @@
 LOCAL_PATH:= $(call my-dir)
 
+libsepol_LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../selinux/libsepol/include
+bzip2_LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../bzip2
+
 bzip2_dir := bzip2
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libbz2
 LOCAL_CFLAGS :=
-LOCAL_C_INCLUDES := $(bzip2_dir)
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/$(bzip2_dir)
 LOCAL_SRC_FILES := \
 	$(bzip2_dir)/blocksort.c  \
 	$(bzip2_dir)/huffman.c    \
@@ -21,9 +24,9 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libqpol
 LOCAL_CFLAGS := -std=gnu99
 LOCAL_C_INCLUDES := \
-	$(LOCAL_PATH)/$(bzip2_dir) \
 	$(LOCAL_PATH)/../include \
-	$(LOCAL_PATH)/../libsepol/include
+	$(libsepol_LOCAL_C_INCLUDES) \
+	$(bzip2_LOCAL_C_INCLUDES)
 
 LOCAL_SRC_FILES := \
 	avrule_query.c \

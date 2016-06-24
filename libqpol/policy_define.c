@@ -1510,6 +1510,7 @@ int define_compute_type(int which)
 	}
 	default:{
 		assert(0);	       /* should never get here */
+		return NULL;
 	}
 	}
 }

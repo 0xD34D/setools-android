@@ -289,6 +289,7 @@ role_datum_t *declare_role(void)
 	}
 	default:{
 		assert(0);	       /* should never get here */
+		return NULL;
 	}
 	}
 }
@@ -351,6 +352,7 @@ type_datum_t *declare_type(unsigned char primary, unsigned char isattr)
 	}
 	default:{
 		assert(0);	       /* should never get here */
+		return NULL;
 	}
 	}
 }
@@ -480,6 +482,7 @@ user_datum_t *declare_user(void)
 	}
 	default:{
 		assert(0);	       /* should never get here */
+		return NULL;
 	}
 	}
 }
@@ -820,6 +823,7 @@ int require_role(int pass)
 	}
 	default:{
 		assert(0);	       /* should never get here */
+		return NULL;
 	}
 	}
 }
@@ -871,6 +875,7 @@ static int require_type_or_attribute(int pass, unsigned char isattr)
 	}
 	default:{
 		assert(0);	       /* should never get here */
+		return NULL;
 	}
 	}
 }
@@ -930,6 +935,7 @@ int require_user(int pass)
 	}
 	default:{
 		assert(0);	       /* should never get here */
+		return NULL;
 	}
 	}
 }
@@ -977,6 +983,7 @@ int require_bool(int pass)
 	}
 	default:{
 		assert(0);	       /* should never get here */
+		return NULL;
 	}
 	}
 }
@@ -1039,6 +1046,7 @@ int require_sens(int pass)
 	}
 	default:{
 		assert(0);	       /* should never get here */
+		return NULL;
 	}
 	}
 }
@@ -1091,6 +1099,7 @@ int require_cat(int pass)
 	}
 	default:{
 		assert(0);	       /* should never get here */
+		return NULL;
 	}
 	}
 }
